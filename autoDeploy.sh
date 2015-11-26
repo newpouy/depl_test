@@ -1,5 +1,8 @@
 #!/bin/bash
 
+# 톰캣의 webapps폴더에 war를 배포하고 압축을 푼다는 가정하에 작성했습니다. 
+# 배포판을 가리키는 심볼릭링크명은 'link'입니다.
+
 echo "depl_test"
 
 CHECK=`ps -ef | grep tomcat | grep -v grep | wc -l` #톰캣프로세스 갯수 체크
