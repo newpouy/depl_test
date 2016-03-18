@@ -7,7 +7,7 @@ NOW=$(date +"%Y%m%d%H%M%S")
 echo "==============  konggacksi  =================="
 if [ $(ps -eaf | grep java | grep $tomcatdir/bin | wc -l) -eq 0 ]
 then
-   echo "   LAST." $tomcatname " is not working"
+   echo "   LAST." $tomcatname " is not operating"
    bash $tomcatdir/bin/startup.sh
 else
    echo "================================"
@@ -20,12 +20,12 @@ else
 
    if [ $(ps -eaf | grep java | grep $tomcatdir/bin | wc -l) -eq 0 ]
    then
-      echo "   3. Process Checking"
-      echo "      - Shutdown Success"
+      echo "   3. Process now Checking"
+      echo "      - Success down"
       echo " "
    else
       echo "   3. Process Checking"
-      echo "      - Shutdown Failed"
+      echo "      - Fail down"
       echo " "
       ps -eaf | grep java | grep $tomcatdir/bin | awk '{print $2}' |
       while read PID
