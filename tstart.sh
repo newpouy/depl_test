@@ -1,20 +1,20 @@
 #!/bin/sh
-tomcatdir="/namee/systemSW/WAS/tomcat"
-logdir="/namee/systemSW/thread_logs"
-tomcatname="Tomcat1"
+tomcatdir="/konggacksi/systemSW/WAS/tomcat"
+logdir="/konggacksi/systemSW/thread_logs"
+tomcatname="Tomcat_konggacksi"
 NOW=$(date +"%Y%m%d%H%M%S")
 
 echo "==============  konggacksi  =================="
 if [ $(ps -eaf | grep java | grep $tomcatdir/bin | wc -l) -eq 0 ]
 then
-   echo "   LAST." $tomcatname "not working"
+   echo "   LAST." $tomcatname " is not working"
    bash $tomcatdir/bin/startup.sh
 else
    echo "================================"
    echo "   1. " $tomcatname "shutdown"
    echo " "
    bash $tomcatdir/bin/shutdown.sh
-   echo "   2. WE ARE Waiting 5 SEC"
+   echo "   2. WE are waiting for 5 SEC"
    echo " "
    sleep 5
 
